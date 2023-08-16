@@ -6,11 +6,11 @@
         </a>
       </div>
       <div class="hidden md:flex space-x-4">
-        <a routerLink="" class="text-myColour2 hover:text-white md:px-4 lg:px-8"> <em class="bi bi-house-fill mr-3"></em>Home</a>
-        <a routerLink="about" class="text-white hover:text-myColour2 md:px-4 lg:px-8"> <span class="text-myColour2">01.</span> About</a>
-        <a routerLink="#projects" class="text-white hover:text-myColour2 md:px-4 lg:px-8"> <span class="text-myColour2">02.</span> Projects</a>
-        <a routerLink="#experience" class="text-white hover:text-myColour2 md:px-4 lg:px-8"> <span class="text-myColour2">03.</span> Experience </a>
-        <a routerLink="#contact" class="text-white hover:text-myColour2 md:px-4 lg:px-8"> <span class="text-myColour2">04.</span> Contact</a>
+        <a (click)="toggleMobileMenu()" routerLink="" class="text-myColour2 hover:text-white md:px-4 lg:px-8"> <em class="bi bi-house-fill mr-3"></em>Home</a>
+        <a (click)="toggleMobileMenu()" routerLink="about" class="text-white hover:text-myColour2 md:px-4 lg:px-8"> <span class="text-myColour2">01.</span> About</a>
+        <a (click)="toggleMobileMenu()" routerLink="project" class="text-white hover:text-myColour2 md:px-4 lg:px-8"> <span class="text-myColour2">02.</span> Projects</a>
+        <a (click)="toggleMobileMenu()" routerLink="experience" class="text-white hover:text-myColour2 md:px-4 lg:px-8"> <span class="text-myColour2">03.</span> Experience </a>
+        <a (click)="scrollToBottom()" class="text-white cursor-pointer hover:text-myColour2 md:px-4 lg:px-8"> <span class="text-myColour2">04.</span> Contact</a>
       </div>
       <div class="md:hidden" (click)="toggleMobileMenu()">
         <button class="text-white" *ngIf="!showMobileMenu">
@@ -32,11 +32,11 @@
       </div>
       <div class="md:hidden p-2 relative" *ngIf="showMobileMenu">
         <img (click)="toggleMobileMenu()" src="https://cdn-icons-png.flaticon.com/512/11240/11240051.png" class="h-4 absolute end-0" alt="">
-        <a routerLink="" class="text-myColour2 hover:text-white md:px-4 lg:px-8 block"> <em class="bi bi-house-fill mr-3"></em>Home</a>
-        <a routerLink="about" class="text-white hover:text-myColour2 md:px-4 lg:px-8 block"> <span class="text-myColour2">01.</span> About</a>
-        <a routerLink="#projects" class="text-white hover:text-myColour2 md:px-4 lg:px-8 block"> <span class="text-myColour2">02.</span> Projects</a>
-        <a routerLink="#experience" class="text-white hover:text-myColour2 md:px-4 lg:px-8 block"> <span class="text-myColour2">03.</span> Experience </a>
-        <a routerLink="#contact" class="text-white hover:text-myColour2 md:px-4 lg:px-8 block"> <span class="text-myColour2">04.</span> Contact</a>
+        <a (click)="toggleMobileMenu()" routerLink=""  class="text-myColour2 hover:text-white md:px-4 lg:px-8 block"> <em class="bi bi-house-fill mr-3"></em>Home</a>
+        <a (click)="toggleMobileMenu()" routerLink="about"  class="text-white hover:text-myColour2 md:px-4 lg:px-8 block"> <span class="text-myColour2">01.</span> About</a>
+        <a (click)="toggleMobileMenu()" routerLink="project"  class="text-white hover:text-myColour2 md:px-4 lg:px-8 block"> <span class="text-myColour2">02.</span> Projects</a>
+        <a (click)="toggleMobileMenu()" routerLink="experience"  class="text-white hover:text-myColour2 md:px-4 lg:px-8 block"> <span class="text-myColour2">03.</span> Experience </a>
+        <a (click)="scrollToBottom()" class="text-white cursor-pointer hover:text-myColour2 md:px-4 lg:px-8 block"> <span class="text-myColour2">04.</span> Contact</a>
       </div>
     </div>
   </nav>

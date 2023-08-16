@@ -1,12 +1,14 @@
-<div class="bg-myColour relative overflow-x-hidden font-display h-screen">
+<div class="bg-myColour relative overflow-x-hidden  h-screen">
   <!-- <app-navbar></app-navbar> -->
   <app-nvbr></app-nvbr>
-  <router-outlet></router-outlet>
-
+  <div class="min-h-[80vh] w-[100vw] flex md:items-center items-start ">
+    <router-outlet class="route-fade"></router-outlet>
+  </div>
+  <app-contact></app-contact>
 
     <!-- left bottom corner icons  -->
 
-    <ul class="fixed text-white bottom-6 left-4">
+    <ul class="fixed text-white bottom-6 left-4 ">
       <li class="md:mt-4"><a target="_blank" href="https://www.github.com/nirmalshah20519" target="_blank" class="bi bi-github hover:text-neutral-400"></a></li>
       <li class="md:mt-4"><a target="_blank" href="https://www.instagram.com/__nirmal_d_shah__/" class="bi bi-instagram hover:text-pink-500 hover:shadow-lg"></a></li>
       <li class="md:mt-4"><a target="_blank" href="https://www.linkedin.com/in/nirmal-shah-3208321a0" class="bi bi-linkedin hover:text-blue-500"></a></li>

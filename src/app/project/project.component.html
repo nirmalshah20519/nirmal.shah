@@ -1,0 +1,47 @@
+
+<div class="flex mb-6 justify-center">
+    <p class="text-slate-300 font-bold text-xl md:text-2xl xl:my-2 xl:w-fit md:px-8 xl:px-2"> <span
+        class="text-myColour2 text-xl">02.</span>
+      Something I've built. </p>
+    </div>
+<div class="flex flex-col items-center justify-center">
+    <div class="w-[100vw] h-[60vh] bg-mycolour relative overflow-hidden">
+        <div
+          *ngFor="let slide of slides; let i = index"
+          class="absolute top-0 left-0 w-full h-full transform transition-transform duration-300"
+          [class.translate-x-full]="i !== currentIndex"
+          [class.translate-x-0]="i === currentIndex"
+        ><div class="w-3/4 md:w-2/3 mx-auto text-3xl text-myColour2 mb-2 font-semibold flex justify-between">
+            <p >
+                {{slide.title}}
+            </p>
+            <p>
+                <a target="_blank" [href]="slide.gitLink" target="_blank" class="bi bi-github text-white hover:text-neutral-400 me-4"></a>
+                <a target="_blank" [href]="slide.liveLink" target="_blank" class="bi bi-link-45deg text-white hover:text-neutral-400"></a>
+            </p>
+        </div>
+          <div class="flex flex-col items-center justify-center w-3/4 md:w-2/3 mx-auto h-full relative">
+            <img class="w-full h-full" [src]="slide.image" [alt]="slide.description" />
+            <div class="absolute bottom-10 left-0 p-4 bg-black bg-opacity-50 w-full">
+              <p class="text-white text-center">{{ slide.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 flex w-2/3 justify-between">
+        <button
+          (click)="prevSlide()"
+          class="px-4 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded disabled:opacity-50"
+          [disabled]="currentIndex === 0"
+        >
+          Previous
+        </button>
+        <button
+          (click)="nextSlide()"
+          class="px-4 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded disabled:opacity-50"
+          [disabled]="currentIndex === slides.length - 1"
+        >
+          Next
+        </button>
+      </div>
+</div>
